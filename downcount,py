@@ -51,7 +51,7 @@ if __name__ == "__main__":
     options = parse_options()
 
     word_list_tuples = postprocess_word_list(read_word_list(options.word_list))
-    phrases = [options.phrase, ] + get_sorted_subphrases(options.phrase)
+    phrases = [sorted(options.phrase), ] + get_sorted_subphrases(options.phrase)
 
     matches = set()
 
