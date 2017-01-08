@@ -66,6 +66,6 @@ if __name__ == "__main__":
     else:
         print("No matches...")
 
-    for match in matches:
+    for match in sorted(matches, key = lambda m: len(m)):
         print(match)
  
