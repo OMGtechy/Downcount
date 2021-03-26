@@ -24,7 +24,7 @@ def parse_options():
     parser = argparse.ArgumentParser(description = "Solve anagrams and sub-anagrams")
 
     parser.add_argument("--word-list", dest = "word_list", help = "The word list to check against", required = True)
-    parser.add_argument("--phrase", dest = "phrase", help = "The phrase to check for [sub-]anagrams of", required = True)
+    parser.add_argument("--phrase", type = str.lower, dest = "phrase", help = "The phrase to check for [sub-]anagrams of", required = True)
 
     return parser.parse_args()
 
